@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+.Dashboard{
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(https://images.hdqwalls.com/download/batman-the-detective-fp-1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    margin: auto;
+    padding: 20px 40px;
+}
+.logo{
+    text-decoration: none;
+    color: rgb(63, 158, 231);
+    font-size: 35px;
+    cursor: default;
+    font-weight: 700;
+    text-transform: capitalize; 
+}
+.navbar .adniministrator{
+    text-decoration: none;
+    color: rgb(63, 158, 231);
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.navbar .adniministrator:hover{
+    color: orange;
+}
+.fa-power-off{
+    font-size: 25px;
+    margin: 0 0 0 5px;
+}
+.navbar .adniministrator::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar .adniministrator:hover::after{
+    width: 100%;
+}
+.header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+.menu-bar{
+    position: relative;
+    right: 0;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    height: 100vh;
+}
+.menu-bar ul li{
+    padding: 20px 120px 20px 30px;
+    list-style: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    transition: 0.5s;
+
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.menu-bar ul li:hover{
+    transform: translateX(10px);
+}
+.menu-bar ul li a i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.container{
+    cursor: default;
+    position: absolute;
+    top: 80px;
+    left: 320px;
+    width: 70%;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding: 20px 10px;
+}
+.title{
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.card-load{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+.box-group{
+    padding: 10px;
+    margin: 10px 5px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    width: 50%;
+}
+.box-group:hover{
+    transform: translateY(-20px);
+}
+.box-content{
+    padding: 5px;
+    color: white;
+}
+.box-content h1{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 5px 0 0 0;
+}
+.box-content h2{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.box-content .bottom{
+    position: relative;
+    top: -10px;
+}
+.box-content .btn{
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.box-content .btn:hover{
+    color: blue;
+}
+.fa-calendar{
+    position: relative;
+    left: 90%;
+}
+.fa-arrow-right{
+    position: relative;
+    left: 46%;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
